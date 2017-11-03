@@ -32,9 +32,10 @@ function addRouter(router, fileName){
 
 module.exports = function(dir){
     let fileName = dir || '/controllers/';
-    var router = require('koa-router')()
-
+    var router = require('koa-router')();
+    // 遍历文件并添加路由
     addRouter(router, fileName);
+
     return router.routes();
 }
     

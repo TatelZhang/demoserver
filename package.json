@@ -12,6 +12,7 @@
   "dependencies": {
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
+    "koa-logger": "^3.1.0",
     "koa-router": "^7.2.1",
     "mime": "^2.0.3",
     "mz": "^2.7.0",

@@ -41,11 +41,11 @@ function createEnv(dir, opts){
 
 function templating(dir, opts){
     var absolutePath = path.join(config.path, dir); // 转换成绝对路径;
-    var env = createEnv(absolutePath, Object.assign({watch:true,noCache:true,filters: function(n){return '0x' + n.toString(16);}},opts||{}));
+    var env = createEnv(absolutePath, Object.assign({watch:true, noCache:false, filters: function(n){return '0x' + n.toString(16);}},opts||{}));
 
     return async (ctx, next)=>{
         ctx.render = function(tpl, models){
-            ctx.response.body = env.render(tpl,Object.assign({},ctx.state || {}, models||{}));
+            ctx.response.body = env.render(tpl, Object.assign({},ctx.state || {}, models||{}));
             ctx.response.type = 'text/html';
         };
         await next();
