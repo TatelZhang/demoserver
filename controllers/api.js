@@ -7,7 +7,7 @@ var login = async(ctx, next)=>{
         username = ctx.request.body.username,
         passwd = ctx.request.body.passwd,
         usernameByCookie = ctx.cookies.get('username');
-    if((username==="tatel"&&passwd === '123456')|| usernameByCookie===username){
+    if((username==="tatel"&&passwd === '123456')|| (usernameByCookie===username&&username==='tatel')){
         ctx.response.status = 200;
         ctx.response.body = { text: `hello, ${username}`, username: usernameByCookie};
         if(usernameByCookie)ctx.cookies.set('username', 'tatel');
