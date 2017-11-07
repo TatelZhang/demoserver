@@ -28,11 +28,11 @@ app.use(readStaticFiles()); // 处理静态文件请求中间件
 
 app.use(router());
 
-// app.use(async (ctx, next)=>{
-//     // console.log(ctx.request);
-//     ctx.response.status = 404;
-//     ctx.response.body = "不存在的";
-// });
+app.use(async (ctx, next)=>{
+    // console.log(ctx.request);
+    ctx.response.status = 404;
+    ctx.render('404.html');
+});
 
 
 
