@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const uuid = require('node-uuid');
 const sql = require('../common.conf').sql;
-console.log('init sequelize..')
+// console.log('init sequelize..')
 
 var sequelize = new Sequelize(sql.datbase, sql.username, sql.password,{
     host: sql.host,

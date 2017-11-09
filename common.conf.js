@@ -6,9 +6,9 @@ var configs = {
     static: path.join(__dirname, '/dist'),
     sql: {
         datbase: 'koaserver',
-        username: 'root',
+        username: 'tatel',
         password: '1234',
-        host: 'localhost',
+        host: '39.108.62.36',
         port: 3306,
         dialect: 'mysql'
     },
